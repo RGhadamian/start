@@ -5,4 +5,4 @@
 * learning how to use unordered lists
 1. first ordered lists
 
-[this is a link](www.google.com)
+[this is a link](https://www.ghadamian.com)
