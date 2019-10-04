@@ -1,5 +1,5 @@
-# start
-1st OS project: Learning Git, Markdown and React
+# Building a NDIS Search Project
+Full Stack (Frontend/Backend): HTML, JS, RUBY, SQL Database
 
 ## First H2 tag for testing
 * learning how to use unordered lists
