@@ -1,2 +1,14 @@
-<h1>Search#new</h1>
-<p>Find me in app/views/search/new.html.erb</p>
+<div class="mx-auto" style="width: 80%;">
+<img class="text-center" src="karista.svg" alt="">
+<h1 class="text-center">Find the ideal disability support service for you</h1>
+
+  <%= form_tag '/login', {class: 'form-signin'} do %>
+
+    Service Required: <%= text_field_tag :service_required, nil, placeholder: "Services", class: 'form-control', autofocus: true, :required => true %>
+    Postcode or Suburb: <%= password_field_tag :postcode_suburb, nil, placeholder: "Postcode", class: 'form-control', :required => true  %>
+
+    <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block'  %>
+
+  <% end %>
+
+</div>
