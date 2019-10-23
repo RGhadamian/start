@@ -1,0 +1,12 @@
+<h1><%= @title %></h1>
+<ul>
+  <% @provider_all.each do |provider| %>
+    <li>
+      <%= link_to provider[:name], show_provider_path(provider[:id]) %>
+
+    </li>
+
+
+  <% end %>
+
+</ul>

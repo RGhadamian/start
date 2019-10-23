@@ -16,11 +16,10 @@
   </head>
 <body>
   <!--NAVBAR START-->
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark branding">
-    <a class="navbar-brand" href="#">
-      <img src="karista.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Karista
-    </a>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark header">
+    <%= link_to image_tag("karista.svg", :alt => "logo", :size => '30x30'), {action: 'new', controller: 'search'}  %>
+    <%= link_to 'Karista', {controller: "search", action: "new"}, class: "navbar-brand" %>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,7 +44,7 @@
           </div>
         </li>
         <li class="nav-item nav-link">
-          <%= link_to 'Show All Providers', show_kitten_path %>
+          <%= link_to 'Show All Providers', provider_index_path %>
         </li>
       </ul>
       <% if current_user %>
@@ -62,12 +61,10 @@
 
 
 
-
-
 <%= yield %>
 
-<div class="container-fluid branding">
-  <div class="row">
+<div class="container-fluid footer">
+  <div class="text-center">
         <a href="#">Terms & Conditions</a> |
         <a href="#">Privacy Policy</a> |
         <a href="#">Moderation Policy</a> |
@@ -75,15 +72,15 @@
         <a href="#">Provider admin</a> |
         <a href="#">Contact us</a>
     </div>
-  <div class="row">
+  <p>
     <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Linkedin</a>
-  </div>
-  <div class="row">
+  </p>
+  <p>
     Call us on 1300 274 782
-  </div>
-  <div class="row">
-    Copyright C 2018 Karista Pty Ltd. All rights reserved. ABN 9214763076
-  </div>
+  </p>
+  <p>
+    Copyright © 2018 Karista Pty Ltd. All rights reserved. ABN 9214763076
+  </p>
 </div>
 </body>
 </html>

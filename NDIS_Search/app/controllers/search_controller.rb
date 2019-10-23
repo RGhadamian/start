@@ -8,6 +8,16 @@ class SearchController < ApplicationController
   end
 
   def show
+=begin
     @provider = Provider.find(params[:name])
+=end
   end
+
+  def index
+    @title = "Provider List"
+    @provider_all = Provider.all
+  end
+
 end
+
+

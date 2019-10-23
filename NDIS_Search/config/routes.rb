@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'search#new'
   get 'search/new' => 'search#new', :as => 'home'
   get 'search/result' => 'search#result'#, as => 'show_result'
+  get 'search/index' => 'search#index', :as => 'provider_index'
   get 'search/:name' => 'search#show', :as => 'show_provider'
 
   get '/signup' => 'user#new'

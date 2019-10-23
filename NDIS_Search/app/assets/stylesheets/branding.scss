@@ -1,5 +1,23 @@
-.branding {
+.header {
+  background-color: #3E0F48;
+}
+
+.header a, .header p, .header .nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.footer {
   text-align: center;
   background-color: #3E0F48!important;
   color: white;
+}
+
+.footer a, .footer p {
+  text-decoration: none;
+  color: white;
+  font-size: .75rem;
+  padding-top: 20px;
 }
