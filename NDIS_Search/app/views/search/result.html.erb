@@ -1,5 +1,49 @@
-<h1>Search#result</h1>
-<p>Find me in app/views/search/result.html.erb</p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'Home', home_path %></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= link_to 'Result', show_result_path %></li>
+  </ol>
+</nav>
 
+
+
+<div class="container">
+  <h1>Search Results</h1>
+<p class="font-weight-light">1-20 of XX results in <%= @postcode_result %></p>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">@PROVIDER NAME</h5>
+    <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">VIEW BUTTON</a>
+
+  </div>
+</div>
+  <br>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">@PROVIDER NAME</h5>
+      <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">VIEW BUTTON</a>
+
+    </div>
+  </div>
+  <br>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">@PROVIDER NAME</h5>
+      <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">VIEW BUTTON</a>
+
+    </div>
+  </div>
+  <br>
+
+</div>
 <%= @service_result %>
-<%= @postcode_result %>
+
