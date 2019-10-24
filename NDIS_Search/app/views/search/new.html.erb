@@ -2,19 +2,19 @@
   <%= image_tag("karista.svg", :alt => "logo", :size => '260x180', :class => "mx-auto d-block") %>
 <h2 class="text-center">Find the ideal disability support service for you</h2>
 
-  <%= form_tag '/login', {class: 'form-signin'} do %>
-    <label for=""></label>
-    <select name="service" id="">
+  <%= form_tag create_search_path, {class: 'form-signin'} do %>
+    <label for="service">Service Required:</label>
+    <select name="service" id="services_all" class="custom-select" autofocus="true" required="true">
+      <option selected>Choose...</option>
       <% @services_all.each do |service| %>
         <option value="<%= service.id %>"><%= service.service %></option>
       <% end %>
     </select>
-    Service Required: <%= text_field_tag :service_required, nil, placeholder: "Services", class: 'form-control', autofocus: true, :required => true %>
-    Postcode or Suburb: <%= password_field_tag :postcode_suburb, nil, placeholder: "Postcode", class: 'form-control', :required => true  %>
-
-    
-
-    <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block'  %>
+    <br>
+    <label for="postcode_suburb">Postcode or Suburb:</label>
+     <%= text_field_tag :postcode_suburb, nil, placeholder: "Postcode", class: 'form-control', :required => true  %>
+    <br>
+    <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block' %>
 
   <% end %>
 
