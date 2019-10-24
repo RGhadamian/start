@@ -2,6 +2,8 @@ class SearchController < ApplicationController
   #before_action :authorize
 
   def new
+    @services_all = Service.all
+
   end
 
   def result
