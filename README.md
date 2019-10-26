@@ -1,7 +1,10 @@
 # Building a NDIS Search Project
+
 Full Stack (Frontend/Backend): Ruby on Rails, PostgreSQL, Bootstrap, API's, HTML, CSS, JS
 
-##PROJECT #2 DESCRIPTION
+## Project #2
+### DESCRIPTION
+
 It's time to put everything that you've learned in the past 5 weeks together! For project #1 you will use your knowledge of front and back-end web development to produce an awesome web application that can be used by friends, family or any of the other billions of people who use the Internet. The type of web application you create is your choice.
 
 The objective of this project is to:
@@ -10,7 +13,7 @@ To pull everything together by building a web application from the ground up.
 To demonstrate mastery of topics covered during this course so far.
 You will be working individually for this project. Show us what you've got!
 
-###CORE REQUIREMENTS
+### CORE REQUIREMENTS
 Make sure to do all of the following with your app.
 
 - Models. Your app should have at least 3 models. Make sure they are associated correctly!
@@ -20,14 +23,14 @@ Make sure to do all of the following with your app.
 - User Login. Make sure you have basic authentication and authorization set up (if you need it).
 - Heroku. Deploy your code to Heroku.
 
-###CHALLENGE ADD-ONS
+### CHALLENGE ADD-ONS
 We may not have covered all of these in class, but if you want to push yourself and learn something new, optionally consider doing some of the following with your app.
 
 - Front-end Framework. Use either Twitter Bootstrap or Foundation to kick start your front-end.
 - File upload. Take a look at Cloudinary.
 - Web Scraping. Check out Nokogiri.
 
-###PLANNING & DELIVERABLES
+### PLANNING & DELIVERABLES
 Project Plan deliverables:
 - Scope. What are you planning to build? What features will it have? What do you reasonably think you can implement in the time period?
 - Object Models. Draw out the model associations for your project.
@@ -49,5 +52,6 @@ Make sure that your code is:
 
 We’ll also be looking at:
 
-Quality of communication around decision-making. Can you defend why you chose a certain technology or why you implemented your solution in a certain way?
-Your ability to pick up new technologies and push yourself.
+- Quality of communication around decision-making. 
+- Can you defend why you chose a certain technology or why you implemented your solution in a certain way?
+- Your ability to pick up new technologies and push yourself.
