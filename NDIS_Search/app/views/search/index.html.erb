@@ -3,10 +3,15 @@
   <% @provider_all.each do |provider| %>
     <li>
       <%= link_to provider[:name], show_provider_path(provider[:id]) %>
-
+      <% if provider.services.any? %>
+        <label> has these services:</label>
+        <ul>
+          <% provider.services.each do |service| %>
+            <li><%= service.service %></li>
+          <% end %>
+        </ul>
+      <% end %>
     </li>
-
-
   <% end %>
 
 </ul>
