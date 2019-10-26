@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Request Details & Pricing</h1>
+<h2>PROVIDER NAME</h2>
+
+<%= form_tag create_search_path, {class: 'form-normal'} do %>
+  <label for="name">Your Name:</label>
+  <%= text_field_tag :name, nil, placeholder: "Type here", class: 'form-control', :required => true %>
+  <div id="name_message"></div><br>
+
+  <label for="email">Email:</label><br>x
+  <label for="email">We will only share this with the provider if you accept the quote</label>
+  <%= text_field_tag :email, nil, placeholder: "Type here", class: 'form-control', :required => true %>
+  <div id="postcode_message"></div><br>
+
+  <label for="phone">Phone Number:</label>
+  <%= text_field_tag :phone, nil, placeholder: "Type here", class: 'form-control', :required => true %>
+  <div id="postcode_message"></div><br>
+
+  <label for="service">What Service Do You Require</label>
+  <select name="service" id="service" class="custom-select" autofocus="true" required="true">
+    <option selected>Choose...</option>
+    <option selected>1</option>
+    <option selected>2</option>
+    <option selected>3</option>
+
+  </select>
+  <br>
+
+  <label for="start_date">Preferred Start Date:</label>
+  <%= text_field_tag :start_date, nil, placeholder: "Date", class: 'form-control', :required => true %>
+  <div id="postcode_message"> </div>
+  <br>
+
+  <label for="postcode_suburb">Postcode or Suburb:</label>
+  <%= text_field_tag :postcode_suburb, nil, placeholder: "Postcode", class: 'form-control', :required => true %>
+  <div id="postcode_message"></div><br>
+
+  <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block' %>
+<% end %>
+</div>

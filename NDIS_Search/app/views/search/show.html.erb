@@ -1,1 +1,27 @@
-<h1>Hi there</h1>
+<%= render :partial => 'breadcrumbs' %>
+
+<div class="container">
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">PROVIDER NAME</h5>
+        <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
+        <%= link_to 'Review this Provider', {controller: "review", action: "new"}, class: "btn btn-outline-primary my-2 my-sm-0" %>
+        <%= link_to 'Request details & pricing', {controller: "request", action: "new"}, class: "btn btn-primary my-2 my-sm-0" %>
+        <hr>
+        <h5 class="card-title">About</h5>
+        <p class="card-text">Description</p>
+
+        <h5 class="card-title">Services</h4>
+        <span class="badge badge-pill badge-success">SERVICE</span>
+        <span class="badge badge-pill badge-success">SERVICE</span>
+        <span class="badge badge-pill badge-success">SERVICE</span>
+        <span class="badge badge-pill badge-success">SERVICE</span>
+      </div>
+    </div>
+    <br>
+
+
+
+
+</div>

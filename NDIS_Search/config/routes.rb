@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'request/new'
+  get 'review/new'
   root to: 'search#new'
   get 'search/new' => 'search#new', :as => 'home'
   post 'search/create' => 'search#create', :as => 'create_search'
@@ -12,10 +14,5 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-
-  get '/kitten/all' => 'kitten#all', :as => 'show_kitten'
-  get '/kitten/select/:id' => 'kitten#select', :as => 'select_kitten'
-
-  get '/kittens/moods/:id' => 'kitten#get_kitten_mood'
 
   end

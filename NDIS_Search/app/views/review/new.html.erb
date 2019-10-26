@@ -1,0 +1,86 @@
+<div class="container">
+  <h1>Review this provider</h1>
+  <h2>PROVIDER NAME</h2>
+
+  <%= form_tag create_search_path, {class: 'form-normal'} do %>
+    <label for="name">Was this service delivered in a timely manner?</label>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Maybe
+      </label>
+    </div>
+    <div id="name_message"></div><br>
+
+    <label for="name">Was the service delivered in a safe and friendly manner?</label>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Maybe
+      </label>
+    </div>
+    <div id="name_message"></div><br>
+
+    <label for="name">Do you feel the provider communicated with you effectively?</label>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Maybe
+      </label>
+    </div>
+    <div id="name_message"></div><br>
+
+    <label for="name">Was the service good value for money?</label>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Maybe
+      </label>
+    </div>
+    <div id="name_message"></div><br>
+
+    <label for="name">Would you recommend this service to others?</label>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> No
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Maybe
+      </label>
+    </div>
+    <div id="name_message"></div><br>
+
+    <label for="email">Email:</label><br>
+    <label for="email">We will only share this with the provider if you accept the quote</label>
+    <%= text_field_tag :email, nil, placeholder: "Type here", class: 'form-control', :required => true %>
+    <div id="postcode_message"></div><br>
+
+    <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block' %>
+
+    <%= link_to 'Cancel', {controller: "search", action: "show"} %>
+
+  <% end %>
+</div>
