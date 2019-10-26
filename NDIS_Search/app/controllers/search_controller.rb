@@ -18,6 +18,8 @@ class SearchController < ApplicationController
   def result
     @service_result = @@service
     @postcode_result = @@postcode
+    @services_all = Service.all
+    @provider_all = Provider.all
   end
 
   def show
