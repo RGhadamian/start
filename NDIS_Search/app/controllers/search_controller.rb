@@ -18,8 +18,13 @@ class SearchController < ApplicationController
   def result
     @service_result = @@service
     @postcode_result = @@postcode
-    @services_all = Service.all
+    services_all = Service.find(@@service)
+    providers_all = services_all.providers.all
+    @providers_all = providers_all.select{|provider| provider[:postcode] == @@postcode}
+    some = nil
+=begin
     @provider_all = Provider.all
+=end
   end
 
   def show

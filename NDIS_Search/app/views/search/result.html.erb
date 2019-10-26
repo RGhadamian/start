@@ -3,21 +3,19 @@
 <div class="container">
   <h1>Search Results</h1>
 <p class="font-weight-light">1-20 of <strong>XX results</strong> for <strong><%= Service.find(@service_result).service %></strong> in <strong><%= @postcode_result %></strong></p>
-
-    <% @provider_all.each do |provider| %>
-      <% if provider.postcode == @postcode_result %>
+    <% @providers_all.each do |provider| %>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><%= provider.name %></h5>
             <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
             <p class="card-text"><%= provider.address %></p>
-            <a href="#" class="btn btn-outline-primary my-2 my-sm-0">View</a>
-
+            <%= link_to 'View', {controller: "search", action: "show"}, class: "btn btn-outline-primary my-2 my-sm-0" %>
           </div>
         </div>
         <br>
-      <% end %>
-    <% end %>
+
+  <% end %>
+
 
 </div>
 
