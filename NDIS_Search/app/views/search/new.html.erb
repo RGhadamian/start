@@ -12,10 +12,31 @@
     </select>
     <br>
     <label for="postcode_suburb">Postcode or Suburb:</label>
-     <%= text_field_tag :postcode_suburb, nil, placeholder: "Postcode", class: 'form-control', :required => true  %>
+     <%= text_field_tag :postcode_suburb, nil, placeholder: "Postcode", class: 'form-control', :required => true %>
+    <div id="postcode_message">
+
+    </div>
     <br>
     <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block' %>
 
   <% end %>
 
 </div>
+
+<script type="text/javascript" charset="utf-8">
+  let $postcode = $('#postcode_suburb')
+  $postcode.keyup(function () {
+      console.log('hi')
+      let postcode = $postcode.val()
+      if (postcode.length > 4) {
+          $('#postcode_message').html('Please type valid postcode').addClass('invalid-feedback');
+          $postcode.addClass('is-invalid');
+      } else {
+          $('#postcode_message').html('');
+          $postcode.removeClass('is-invalid')
+
+      }
+
+  })
+
+</script>
