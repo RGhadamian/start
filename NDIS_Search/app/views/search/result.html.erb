@@ -9,7 +9,7 @@
             <h5 class="card-title"><%= provider.name %></h5>
             <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
             <p class="card-text"><%= provider.address %></p>
-            <%= link_to 'View', {controller: "search", action: "show"}, class: "btn btn-outline-primary my-2 my-sm-0" %>
+            <%= link_to "View", show_provider_path(provider[:id]), class: "btn btn-outline-primary my-2 my-sm-0" %>
           </div>
         </div>
         <br>

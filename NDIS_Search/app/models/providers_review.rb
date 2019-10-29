@@ -1,0 +1,2 @@
+class ProvidersReview < ApplicationRecord
+end

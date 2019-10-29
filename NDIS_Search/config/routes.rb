@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post 'search/create' => 'search#create', :as => 'create_search'
   get 'search/result' => 'search#result', :as => 'show_result'
   get 'search/index' => 'search#index', :as => 'provider_index'
-  get 'search/show' => 'search#show', :as => 'show_provider'
+  get 'provider/show/:id' => 'search#show', as: 'show_provider'
 
   get '/signup' => 'user#new'
   post '/users' => 'user#create'

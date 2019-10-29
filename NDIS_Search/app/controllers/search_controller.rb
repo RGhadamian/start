@@ -21,11 +21,7 @@ class SearchController < ApplicationController
   end
 
   def show
-    @service_result = @@service
-    @postcode_result = @@postcode
-    services_all = Service.find(@@service)
-    providers_all = services_all.providers.all
-    @providers_all = providers_all.select{|provider| provider[:postcode] == @@postcode}
+    @provider = Provider.find(params[:id])
   end
 
   def index

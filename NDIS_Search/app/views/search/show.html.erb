@@ -4,19 +4,23 @@
 
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">PROVIDER NAME</h5>
+        <h5 class="card-title"><%= @provider.name %></h5>
         <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
         <%= link_to 'Review this Provider', {controller: "review", action: "new"}, class: "btn btn-outline-primary my-2 my-sm-0" %>
         <%= link_to 'Request details & pricing', {controller: "request", action: "new"}, class: "btn btn-primary my-2 my-sm-0" %>
         <hr>
         <h5 class="card-title">About</h5>
-        <p class="card-text">Description</p>
+        <p class="card-text"><%= @provider.address %></p>
+        <p class="card-text"><%= @provider.phone %></p>
+        <p class="card-text"><%= @provider.website %></p>
 
-        <h5 class="card-title">Services</h4>
-        <span class="badge badge-pill badge-success">SERVICE</span>
-        <span class="badge badge-pill badge-success">SERVICE</span>
-        <span class="badge badge-pill badge-success">SERVICE</span>
-        <span class="badge badge-pill badge-success">SERVICE</span>
+        <h5 class="card-title">Services</h5>
+
+            <% @provider.services.each do |service| %>
+            <span class="badge badge-pill badge-success"><%= service.service %></span>
+              <% end %>
+
+
       </div>
     </div>
     <br>
