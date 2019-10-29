@@ -6,8 +6,8 @@
       <div class="card-body">
         <h5 class="card-title"><%= @provider.name %></h5>
         <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
-        <%= link_to 'Review this Provider', {controller: "review", action: "new"}, class: "btn btn-outline-primary my-2 my-sm-0" %>
-        <%= link_to 'Request details & pricing', {controller: "request", action: "new"}, class: "btn btn-primary my-2 my-sm-0" %>
+        <%= link_to 'Review this Provider', new_review_path(@provider[:id]), class: "btn btn-outline-primary my-2 my-sm-0" %>
+        <%= link_to 'Request details & pricing', new_request_path(@provider[:id]), class: "btn btn-primary my-2 my-sm-0" %>
         <hr>
         <h5 class="card-title">About</h5>
         <p class="card-text"><%= @provider.address %></p>

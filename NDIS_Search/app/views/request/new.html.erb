@@ -1,13 +1,13 @@
 <div class="container">
   <h1>Request Details & Pricing</h1>
-<h2>PROVIDER NAME</h2>
+<h2><%= @provider.name %></h2>
 
 <%= form_tag create_search_path, {class: 'form-normal'} do %>
   <label for="name">Your Name:</label>
   <%= text_field_tag :name, nil, placeholder: "Type here", class: 'form-control', :required => true %>
   <div id="name_message"></div><br>
 
-  <label for="email">Email:</label><br>x
+  <label for="email">Email:</label><br>
   <label for="email">We will only share this with the provider if you accept the quote</label>
   <%= text_field_tag :email, nil, placeholder: "Type here", class: 'form-control', :required => true %>
   <div id="postcode_message"></div><br>
@@ -17,13 +17,12 @@
   <div id="postcode_message"></div><br>
 
   <label for="service">What Service Do You Require</label>
-  <select name="service" id="service" class="custom-select" autofocus="true" required="true">
-    <option selected>Choose...</option>
-    <option selected>1</option>
-    <option selected>2</option>
-    <option selected>3</option>
-
-  </select>
+    <select name="service" id="services_all" class="custom-select" autofocus="true" required="true">
+      <option selected>Choose...</option>
+      <% @provider.services.each do |service| %>
+        <option value="<%= service.id %>"><%= service.service %></option>
+      <% end %>
+    </select>
   <br>
 
   <label for="start_date">Preferred Start Date:</label>

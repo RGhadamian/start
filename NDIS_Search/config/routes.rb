@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'request/new'
-  get 'review/new'
+
   root to: 'search#new'
   get 'search/new' => 'search#new', :as => 'home'
   post 'search/create' => 'search#create', :as => 'create_search'
@@ -15,4 +14,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  end
+
+  get 'request/new:id' => 'request#new', as: 'new_request'
+  get 'review/new/:id' => 'review#new', as: 'new_review'
+
+
+end

@@ -3,7 +3,8 @@
 <div class="container">
   <h1>Search Results</h1>
 <p class="font-weight-light">1-20 of <strong>XX results</strong> for <strong><%= Service.find(@service_result).service %></strong> in <strong><%= @postcode_result %></strong></p>
-    <% @providers_all.each do |provider| %>
+
+  <% @providers_all.each do |provider| %>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><%= provider.name %></h5>
