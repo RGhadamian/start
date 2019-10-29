@@ -9,7 +9,6 @@ class SearchController < ApplicationController
     @@service = params[:service]
     @@postcode = params[:postcode_suburb]
     redirect_to show_result_path
-
   end
 
   def result

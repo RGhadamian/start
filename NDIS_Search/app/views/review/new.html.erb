@@ -2,7 +2,8 @@
   <h1>Review this provider</h1>
   <h2><%= @provider.name %></h2>
 
-  <%= form_tag create_search_path, {class: 'form-normal'} do %>
+  <%= form_tag create_review_path, method: "post", class: 'form-normal'  do %>
+    <input type="hidden" name="provider_id" value="<%= @provider.id %>" >
     <label for="timely">Was this service delivered in a timely manner?</label>
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
       <label class="btn btn-secondary active">
@@ -31,16 +32,16 @@
     </div>
     <div id="name_message"></div><br>
 
-    <label for="communicated_clearly">Do you feel the provider communicated with you effectively?</label>
+    <label for="clear_communication">Do you feel the provider communicated with you effectively?</label>
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
       <label class="btn btn-secondary active">
-        <input type="radio" name="communicated_clearly" id="communicated_clearly-yes" autocomplete="off" value="1"  checked> Yes
+        <input type="radio" name="clear_communication" id="clear_communication-yes" autocomplete="off" value="1"  checked> Yes
       </label>
       <label class="btn btn-secondary">
-        <input type="radio" name="communicated_clearly" id="communicated_clearly-no" autocomplete="off" value="2" > No
+        <input type="radio" name="clear_communication" id="clear_communication-no" autocomplete="off" value="2" > No
       </label>
       <label class="btn btn-secondary">
-        <input type="radio" name="communicated_clearly" id="communicated_clearly-maybe" autocomplete="off" value="3" > Maybe
+        <input type="radio" name="clear_communication" id="clear_communication-maybe" autocomplete="off" value="3" > Maybe
       </label>
     </div>
     <div id="name_message"></div><br>

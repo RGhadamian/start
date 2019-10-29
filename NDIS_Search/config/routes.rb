@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-
   get 'request/new:id' => 'request#new', as: 'new_request'
-  get 'review/new/:id' => 'review#new', as: 'new_review'
 
+  get 'review/new/:id' => 'review#new', as: 'new_review'
+  post 'review/create' => 'review#create', :as => 'create_review'
 
 end
