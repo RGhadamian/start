@@ -82,4 +82,4 @@ production:
   <<: *default
   database: ndis_production
   username: ndis
-  password: <%= ENV['AUTH_DATABASE_PASSWORD'] %>
+  password: 
