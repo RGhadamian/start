@@ -15,7 +15,12 @@
 
         <p class="card-text"><span class="font-weight-bold">Address: </span><%= @provider.address %></p>
         <p class="card-text"><span class="font-weight-bold">Phone: </span><%= @provider.phone %></p>
-        <p class="card-text"><%= link_to "Visit Website", "http://#{@provider.website}", :target => "_blank"  %></p>
+        <p class="card-text">
+          <% if @provider.website.present? %>
+          <%= link_to "Visit Website", "http://#{@provider.website}", :target => "_blank"  %></p>
+            <% else %>
+          <p>No Website</p>
+            <% end %>
         <hr>
         <h5 class="card-title">Services</h5>
 
