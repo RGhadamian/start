@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root to: 'search#new'
   get 'search/new' => 'search#new', :as => 'home'
   post 'search/create' => 'search#create', :as => 'create_search'
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get 'search/index' => 'search#index', :as => 'provider_index'
   get 'provider/show/:id' => 'search#show', as: 'show_provider'
 
+  get 'info/about' => 'info#about', as: 'about'
 
   get '/signup' => 'user#new'
   post '/users' => 'user#create'

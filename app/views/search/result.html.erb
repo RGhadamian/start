@@ -1,28 +1,34 @@
 <%= render :partial => 'breadcrumbs' %>
 
 <div class="container">
-  <h1>Search Results</h1>
+
+  <h5>Search Results</h5>
 
   <% if (@providers_all.length > 0) %>
 <p class="font-weight-light">1-20 of <strong><%= @providers_all.length %> results</strong> for <strong><%= Service.find(@service_result).service %></strong> in <strong><%= @postcode_result %></strong></p>
 
   <% @providers_all.each do |provider| %>
+      <div class="results">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><%= provider.name %></h5>
-            <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
+            <h6 class="card-subtitle mb-2 text-muted"><%= provider.reviews.length %> Reviews</h6>
             <p class="card-text"><%= provider.address %></p>
             <%= link_to "View", show_provider_path(provider[:id]), class: "btn btn-outline-primary my-2 my-sm-0" %>
           </div>
         </div>
+    </div>
         <br>
 
   <% end %>
     <% else %>
-    <h5>No Results <%= link_to 'Search Again', {controller: "search", action: "new"} %></h5>
+    <div class="no_results">
+    <h5>Sorry we have no results for your search </h5>
+      <%= link_to 'Search Again', {controller: "search", action: "new"} %>
+    </div>
     <% end %>
 
-
+  </div>
 </div>
 
 

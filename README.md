@@ -48,7 +48,7 @@ There were a few tricky bits along the way to make this as simple as possible fo
 I think I have a pretty good understanding of the MVC concepts, I've passing through parameters from one controller to another or a view within the same controller.
 
 I didn't want to spend too much time working on concepts that I feel comfortable with: 
- - making the website an exact replica style wise of the Karista website using bootstrap
+ - making the website an exact replica style wise of the Karista website using bootstrap or responsive design
  - putting too much data in the databases
  - adding all the different views such as about us, contact us etc  
  - more user feedback for changes in database state using toasts

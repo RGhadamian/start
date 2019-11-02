@@ -1,6 +1,8 @@
 <div class="container">
-  <h1>Review this provider</h1>
-  <h2><%= @provider.name %></h2>
+  <div class="results">
+  <h3>Review this provider</h3>
+  <h4><%= @provider.name %></h4>
+    <hr>
 
   <%= form_tag update_review_path, method: "post", class: 'form-normal'  do %>
 
@@ -74,9 +76,10 @@
     </div>
     <div id="name_message"></div><br>
 
-    <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block' %>
+    <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary' %>
 
 
     <% #link_to "Cancel", show_provider_path(provider[:id]) %>
   <% end %>
+</div>
 </div>

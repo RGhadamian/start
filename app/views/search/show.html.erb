@@ -2,10 +2,10 @@
 
 <div class="container">
 
-    <div class="card">
+    <div class="card results">
       <div class="card-body">
         <h5 class="card-title"><%= @provider.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">XXX REVIEW</h6>
+        <h6 class="card-subtitle mb-2 text-muted"><%= @provider.reviews.length %> Reviews</h6>
         <%= link_to 'Review this Provider', new_review_path(@provider[:id]), class: "btn btn-outline-primary my-2 my-sm-0" %>
         <%= link_to 'Request details & pricing', new_request_path(@provider[:id]), class: "btn btn-primary my-2 my-sm-0" %>
         <hr>
@@ -13,12 +13,13 @@
         <p class="card-text"><%= @provider.address %></p>
         <p class="card-text"><%= @provider.phone %></p>
         <p class="card-text"><%= @provider.website %></p>
-
+        <hr>
         <h5 class="card-title">Services</h5>
 
             <% @provider.services.each do |service| %>
             <span class="badge badge-pill badge-success"><%= service.service %></span>
               <% end %>
+        <hr>
 
         <h5 class="card-title">Reviews</h5>
 
@@ -28,6 +29,8 @@
               <li><%= review.id %> | <%= link_to 'update', edit_review_path(review[:id]) %> | <%= link_to 'delete', delete_review_path(review[:id]), method: 'delete' %></li>
           <% end %>
           </ul>
+          <% else %>
+        <p>No reviews yet. <%= link_to 'Review this Provider', new_review_path(@provider[:id]) %></p>
         <% end %>
       </div>
     </div>
