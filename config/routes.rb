@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'search/index' => 'search#index', :as => 'provider_index'
   get 'provider/show/:id' => 'search#show', as: 'show_provider'
 
+
   get '/signup' => 'user#new'
   post '/users' => 'user#create'
 
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
 
   get 'review/new/:id' => 'review#new', as: 'new_review'
   post 'review/create' => 'review#create', :as => 'create_review'
-  #delete 'kittens/view/:id/delete' => 'kittens#delete', as: 'delete_kitten'
+  delete 'provider/show/:id/delete' => 'review#delete', as: 'delete_review'
+
 
 end

@@ -23,11 +23,10 @@
         <h5 class="card-title">Reviews</h5>
 
         <% if @provider.reviews.any? %>
-          <label>foods <%= @provider.name %> likes:</label>
           <ul>
             <% @provider.reviews.each do |review| %>
-              <li><%= review.timely %></li>
-            <% end %>
+              <li><%= review.id %> | <%= link_to 'delete', delete_review_path(review[:id]), method: 'delete' %></li>
+          <% end %>
           </ul>
         <% end %>
       </div>

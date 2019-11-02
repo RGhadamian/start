@@ -4,6 +4,7 @@ class ReviewController < ApplicationController
   end
 
   def create
+    @provider = Provider.find(params[:provider_id])
     r1 = Review.new
     r1.timely = params[:timely]
     r1.safe = params[:safe]
@@ -12,14 +13,14 @@ class ReviewController < ApplicationController
     r1.recommend = params[:recommend]
     r1.provider = Provider.find(params[:provider_id])
     r1.save
-    redirect_to home_path
+    redirect_to show_provider_path(@provider)
   end
 
   def delete
-    @kitten = Kitten.find params[:id]
-    @kitten.destroy
-    @kitten.foods.destroy_all
-    redirect_to home_path
+    review = Review.find params[:id]
+    provider_id = review.provider_id
+    review.destroy
+    redirect_to show_provider_path(provider_id)
   end
 
 end
