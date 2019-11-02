@@ -1,6 +1,7 @@
 <div class="container">
-  <h1>Request Details & Pricing</h1>
-<h2><%= @provider.name %></h2>
+  <div class="results">
+  <h3>Request Details & Pricing</h3>
+<h4><%= @provider.name %></h4>
 
 <%= form_tag create_search_path, {class: 'form-normal'} do %>
   <label for="name">Your Name:</label>
@@ -34,6 +35,7 @@
   <%= text_field_tag :postcode_suburb, nil, placeholder: "Postcode", class: 'form-control', :required => true %>
   <div id="postcode_message"></div><br>
 
-  <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary btn-block' %>
+  <%= submit_tag "Submit", :class => 'btn btn-lg btn-primary' %>
 <% end %>
+</div>
 </div>

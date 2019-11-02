@@ -3,14 +3,6 @@
 Website: [NDIS Search](https://grim-moonlight-28048.herokuapp.com) - hosted on Heroku
 
 GitHub: [NDIS Search](https://github.com/RGhadamian/GA-Full-Stack-Project) 
- 
-## Project Requirements
-- **Models.** Your app should have at least 3 models. Make sure they are associated correctly!
-- **Views.** Use partials to DRY (Don’t Repeat Yourself) up your views.
-- **Handles invalid data.** Forms in your application should validate data and handle incorrect inputs. Validate sign up information, verify valid email addresses and secure passwords.
-- **Use Gems** Use a GEM that talks to an API to add functionality to your app.
-- **User Login.** Make sure you have basic authentication and authorization set up (if you need it).
-- **Heroku.** Deploy your code to Heroku.
 
 ### Technologies used
 - Ruby on Rails
@@ -65,7 +57,16 @@ I didn't want to spend too much time working on concepts that I feel comfortable
 
 ### Future Extensions
 - Rebuilding front end and backend on React and Express
+- Seeding databases with all provider information provided on NDIS PDF's
 - Adding more animations and validation on the front end and backend
 - Building more functionality for dashboards:
     - to build user profiles for users making it easier to search for future services and start conversations
     - to give providers more power over their profile and manage conversations with users 
+
+## Project Requirements
+- **Models.** Your app should have at least 3 models. Make sure they are associated correctly!
+- **Views.** Use partials to DRY (Don’t Repeat Yourself) up your views.
+- **Handles invalid data.** Forms in your application should validate data and handle incorrect inputs. Validate sign up information, verify valid email addresses and secure passwords.
+- **Use Gems** Use a GEM that talks to an API to add functionality to your app.
+- **User Login.** Make sure you have basic authentication and authorization set up (if you need it).
+- **Heroku.** Deploy your code to Heroku.
