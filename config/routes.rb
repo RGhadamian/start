@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get 'review/new/:id' => 'review#new', as: 'new_review'
   post 'review/create' => 'review#create', :as => 'create_review'
+  get 'provider/show/:id/edit' => 'review#edit', as: 'edit_review'
+  post 'provider/show/:id/update' => 'review#update', as: 'update_review'
   delete 'provider/show/:id/delete' => 'review#delete', as: 'delete_review'
 
 

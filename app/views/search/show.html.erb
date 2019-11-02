@@ -25,7 +25,7 @@
         <% if @provider.reviews.any? %>
           <ul>
             <% @provider.reviews.each do |review| %>
-              <li><%= review.id %> | <%= link_to 'delete', delete_review_path(review[:id]), method: 'delete' %></li>
+              <li><%= review.id %> | <%= link_to 'update', edit_review_path(review[:id]) %> | <%= link_to 'delete', delete_review_path(review[:id]), method: 'delete' %></li>
           <% end %>
           </ul>
         <% end %>
