@@ -14,4 +14,12 @@ class ReviewController < ApplicationController
     r1.save
     redirect_to home_path
   end
+
+  def delete
+    @kitten = Kitten.find params[:id]
+    @kitten.destroy
+    @kitten.foods.destroy_all
+    redirect_to home_path
+  end
+
 end

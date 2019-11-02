@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 
   get 'review/new/:id' => 'review#new', as: 'new_review'
   post 'review/create' => 'review#create', :as => 'create_review'
+  #delete 'kittens/view/:id/delete' => 'kittens#delete', as: 'delete_kitten'
 
 end

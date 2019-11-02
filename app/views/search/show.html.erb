@@ -20,7 +20,16 @@
             <span class="badge badge-pill badge-success"><%= service.service %></span>
               <% end %>
 
+        <h5 class="card-title">Reviews</h5>
 
+        <% if @provider.reviews.any? %>
+          <label>foods <%= @provider.name %> likes:</label>
+          <ul>
+            <% @provider.reviews.each do |review| %>
+              <li><%= review.timely %></li>
+            <% end %>
+          </ul>
+        <% end %>
       </div>
     </div>
     <br>
