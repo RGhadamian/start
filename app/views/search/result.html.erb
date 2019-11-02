@@ -2,7 +2,9 @@
 
 <div class="container">
   <h1>Search Results</h1>
-<p class="font-weight-light">1-20 of <strong>XX results</strong> for <strong><%= Service.find(@service_result).service %></strong> in <strong><%= @postcode_result %></strong></p>
+
+  <% if (@providers_all.length > 0) %>
+<p class="font-weight-light">1-20 of <strong><%= @providers_all.length %> results</strong> for <strong><%= Service.find(@service_result).service %></strong> in <strong><%= @postcode_result %></strong></p>
 
   <% @providers_all.each do |provider| %>
         <div class="card">
@@ -16,6 +18,9 @@
         <br>
 
   <% end %>
+    <% else %>
+    <h5>No Results <%= link_to 'Search Again', {controller: "search", action: "new"} %></h5>
+    <% end %>
 
 
 </div>

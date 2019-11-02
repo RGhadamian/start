@@ -26,12 +26,14 @@ There are a couple of functions I wanted the website to have:
 - Ability to log in and out as a user (to extend with ability to add/remove services and providers with different user roles and permissions, and user and provider dashboards for relevant services)
 - Ability to search for providers based on 2 search criterias (postcode and services) with front end invalid data checking and services list populated from the database (to extend with front end JS auto-complete library)
 - Search results to list all providers that match the search criteria using a join table between a many-to-many relationship between providers and services (to extend with Google Maps API, and finding 'local' within a 25/50 km radius of postcode)
-    - Use of partials in the breadcrumbs   
+    - Use of partials in the breadcrumbs
+    - Results to show the reviews displaying in search results
 - Ability to search the total list of providers in an index
     - list of providers to show the services offered by each provider
 - Dynamic URL slugs for each provider with information about the provider drawings from database details like services offered. 
-    - Ability to add reviews of providers and adding to table (to extend with reviews displaying in search results)
+    - Ability to add, update and delete reviews of providers 
     - Ability to request pricing and details (to be extended with data sent to the providers who match the criteria)
+
 - Styling to be close enough to the Karista website without spending too much time on it
 
 ### Thoughts
