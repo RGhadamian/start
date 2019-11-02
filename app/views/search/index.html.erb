@@ -1,6 +1,9 @@
 <%= render :partial => 'breadcrumbs' %>
 <div class="container">
-<h3><%= @title %></h3>
+
+  <div class="results">
+    <h4><%= @title %></h4>
+    <hr>
 <ul>
   <% @provider_all.each do |provider| %>
     <li>
@@ -17,4 +20,5 @@
   <% end %>
 
 </ul>
+</div>
 </div>
